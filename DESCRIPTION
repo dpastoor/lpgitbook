@@ -1,0 +1,12 @@
+Package: lpgitbook
+Type: Package
+Title: Knits Rmd files to format suitable for gitbook
+Version: 0.0.0
+Date: 2015-03-06
+Author: Devin Pastoor <devin.pastoor@gmail.com>
+Maintainer: Devin Pastoor <devin.pastoor@gmail.com>
+Description: A package for facilitating literate programming (via knitr) to create gitbooks.
+License: MIT
+LazyData: TRUE
+Suggests: knitr
+VignetteBuilder: knitr
