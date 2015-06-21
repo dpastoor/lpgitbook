@@ -1,0 +1,10 @@
+---
+title: "introp1"
+author: "devin"
+date: "March 6, 2015"
+output:
+  md_document:
+    variant: markdown_github
+---
+
+Some body text
