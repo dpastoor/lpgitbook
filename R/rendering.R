@@ -7,8 +7,10 @@ render_rmds_to_md <- function(dir, ignore = NULL) {
     # TODO: handle ignore files
   }
   rmds <- get_rmds(dir)
+  message("injecting yaml md headers")
   vapply(rmds, inject_yaml_md_output, logical(1))
 
+  message("rendering")
   vapply(rmds, rmarkdown::render, character(1))
 
 }
