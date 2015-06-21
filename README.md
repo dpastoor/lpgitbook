@@ -43,3 +43,12 @@ on windows for now.
 
 * how to move/cache a book so it doesn't get re-rendered completely every time, but also
 doesn't pollute with a _temp file
+
+* diplaying code output - either show/hide in css or remove via echo = F in knitr directly
+
+* programmatically creating/assisting with table of contents for all rmd files
+
+### untested
+
+* creating pdf/.epub/etc, only html has been checked
+* only basic injection/directory tests, so still a little bit of wild west for more complex folder structures
