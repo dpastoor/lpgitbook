@@ -2,7 +2,11 @@
 title: "introp1"
 author: "devin"
 date: "March 6, 2015"
-output: html_document
+output: 
+  md_document:
+    toc: true
+    toc_depth: 2
+    variant: markdown_github
 ---
 
 # Chapter 2 part 1
@@ -16,10 +20,24 @@ When you click the **Knit** button a document will be generated that includes bo
 summary(cars)
 ```
 
+## h2 heading
+
 You can also embed plots, for example:
 
 ```{r, echo=FALSE}
 plot(cars)
 ```
 
+### h3 subheading
+
+* bullet
+
+### h3 subheading 2
+
+* another bullet
+
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## another h2 heading
+
+some final text
