@@ -24,12 +24,12 @@ prepare_book_dir <- function(dir) {
   folder <- basename(path)
   new_folder <- paste0("_temp_", folder)
   new_path <- gsub(folder, new_folder, path, fixed=T)
-  if (!dir.exists(new_path)) {
+  if (!file.exists(new_path)) {
     message("creating temp directory")
     dir.create(new_path)
   }
   message("copying all files to temp dir")
-  file.copy(paste0(path, "."), new_path, overwrite=TRUE, recursive = TRUE)
+  file.copy(paste0(path, "//."), new_path, overwrite=TRUE, recursive = TRUE)
   return(new_path)
 }
 
