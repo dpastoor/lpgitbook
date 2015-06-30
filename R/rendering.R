@@ -1,8 +1,20 @@
+#' render and log all rmds
+#' @param file rmd file to render
+#' @param ... to pass to rmarkdown::render
+#' @export
+render_and_log <- function(file,...) {
+  log_file <- paste0(file, ".log")
+ writeLines(paste0("beginning render of: ", file), log_file)
+  output <- rmarkdown::render(file,...)
+ cat(c("completed render of: ", file), file= log_file, append=TRUE )
+  return(output)
+}
+
 #' render all rmds
 #' @param dir
 #' @param ignore
 #' @export
-render_rmds_to_md <- function(dir, ignore = NULL) {
+render_rmds_to_md <- function(dir, ignore = NULL, log_render=FALSE) {
   if(!is.null(ignore)) {
     # TODO: handle ignore files
   }
@@ -11,7 +23,11 @@ render_rmds_to_md <- function(dir, ignore = NULL) {
   vapply(rmds, inject_yaml_md_output, logical(1))
 
   message("rendering")
-  vapply(rmds, rmarkdown::render, character(1))
+  if(!log_render) {
+    vapply(rmds, rmarkdown::render, character(1))
+  } else {
+  vapply(rmds, render_and_log, character(1))
+  }
 
 }
 
