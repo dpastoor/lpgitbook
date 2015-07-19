@@ -1,11 +1,15 @@
 README
 =======
 
-### knit_book("dir")
+The two commands (currently) to knit the book are
 
-will copy the directory at the same level with the name _temp_<dir>
+```
+prepare_book_dir()
+```
 
-edits all rmd files in YAML to have
+which will copy the directory at the same level with the name `_temp_<dir>`
+
+and then edits all rmd files in YAML to have:
 
 ```
 output:
@@ -13,15 +17,19 @@ output:
     variant: markdown_github
 ```
 
-via `inject_yaml_md_output()`
+Then 
 
+```
+render_rmds_to_md()
+```
 
-then renders each to markdown.
+each to markdown.
 
 After the markdown is rendered, the book is created in the _book directory
 
+For example, a project with a folder `sample_proj` containing the Rmd files would be rendered as such:
 
-Note the requirement for the trailing backslash for the dir (for now)
+**Note** the requirement for the trailing backslash for the dir (for now)
 
 ```
 dir <- "sample_proj/"
@@ -29,7 +37,7 @@ book_dir <- prepare_book_dir(dir)
 render_rmds_to_md(book_dir)
 ```
 
-Then in node in the created directory
+Then in the created directory from the command line (with gitbook installed in your path via node)
 
 ```
 gitbook install
@@ -52,3 +60,13 @@ doesn't pollute with a _temp file
 
 * creating pdf/.epub/etc, only html has been checked
 * only basic injection/directory tests, so still a little bit of wild west for more complex folder structures
+* 
+
+## node requirement
+
+node/iojs are required to use gitbook, and can be installed globally from npm with:
+
+```
+npm install -g gitbook
+```
+
