@@ -23,9 +23,7 @@ Then
 render_rmds_to_md()
 ```
 
-each to markdown.
-
-After the markdown is rendered, the book is created in the _book directory
+renders each to markdown. After the markdown is rendered, the book is created in the _book directory in the newly created directory.
 
 For example, a project with a folder `sample_proj` containing the Rmd files would be rendered as such:
 
