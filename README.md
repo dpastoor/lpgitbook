@@ -1,3 +1,7 @@
+
+# Depreciated - instead use https://bookdown.org/yihui/bookdown/ which this repo does, but better
+
+
 README
 =======
 
