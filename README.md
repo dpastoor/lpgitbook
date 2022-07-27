@@ -1,5 +1,5 @@
 
-# Depreciated - instead use https://bookdown.org/yihui/bookdown/ which this repo does, but better
+# Deprecated - instead use https://bookdown.org/yihui/bookdown/ which is what this repo does, but way better
 
 
 README
