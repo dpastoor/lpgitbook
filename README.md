@@ -2,7 +2,7 @@
 # Deprecated - instead use https://bookdown.org/yihui/bookdown/ which is what this repo does, but way better
 
 
-README
+lpgitbook - "literate programming with gitbook"
 =======
 
 The two commands (currently) to knit the book are
